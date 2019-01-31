@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="/common.css">
+    <style>
+        .left-column,
+        .middle-column,
+        .right-column {
+            height: 300px;
+            color: #FFF;
+            font-size: 50px;
+            font-weight: 500;
+            text-align: center;
+            line-height: 300px;
+            margin: 0;
+            padding: 0;
+        }
+
+        .left-column {
+            background: #ff4c34;
+            width: 150px;
+        }
+
+        .middle-column {
+            background: #59badf;
+        }
+
+        .right-column {
+            background: #dfdfdf;
+        }
+
+        .margin-fix .left-column {
+            float: left;
+        }
+
+        .margin-fix .right-column {
+            margin-left: 150px;
+        }
+
+        .bfc-fix .left-column {
+            float: left;
+        }
+
+        .bfc-fix .right-column {
+            overflow: hidden;
+        }
+
+        .flex-box-fix {
+            display: flex;
+            flex-grow: 0;
+        }
+
+        .flex-box-fix .left-column {
+            flex-shrink: 0;
+        }
+
+        .flex-box-fix .right-column {
+            flex-grow: 1;
+        }
+
+        .fit-width {
+            font-size: 0;
+        }
+
+        .fit-width .left-column {
+            display: inline-block;
+            width: 50%;
+        }
+
+        .fit-width .right-column {
+            display: inline-block;
+            width: 50%;
+        }
+
+        .flex-box-fit-width {
+            display: flex;
+        }
+
+        .flex-box-fit-width .left-column,
+        .flex-box-fit-width .right-column {
+            flex-shrink: 1;
+            flex-grow: 1;
+        }
+
+        .three-fit-width .left-column {
+            float: left;
+        }
+
+        .three-fit-width .middle-column {
+             overflow: hidden;
+        }
+
+        .three-fit-width .right-column {
+            width: 150px;
+            float: right;
+        }
+
+    </style>
+    <title>Fixed width column</title>
+</head>
+<body>
+<section class="two-columns-section">
+    <h1>Two columns - left fixed width</h1>
+    <h2>MARGIN-LEFT</h2>
+    <div class="preview margin-fix">
+        <div class="left-column">LEFT</div>
+        <div class="right-column">RIGHT</div>
+    </div>
+
+    <h2>BFC</h2>
+    <div class="preview bfc-fix">
+        <div class="left-column">LEFT</div>
+        <div class="right-column">RIGHT</div>
+    </div>
+
+    <h2>FLEX BOX</h2>
+    <div class="preview flex-box-fix">
+        <div class="left-column">LEFT</div>
+        <div class="right-column">RIGHT</div>
+    </div>
+
+    <h1>Two columns - fit width</h1>
+    <h2>NORMAL FIT WIDTH</h2>
+    <div class="preview fit-width">
+        <div class="left-column">LEFT</div>
+        <div class="right-column">RIGHT</div>
+    </div>
+
+    <h2>FLEX FIT WIDTH</h2>
+    <div class="preview flex-box-fit-width">
+        <div class="left-column">LEFT</div>
+        <div class="right-column">RIGHT</div>
+    </div>
+</section>
+
+<section class="three-columns-section">
+    <h1>Three columns - fit width</h1>
+    <h2>FIT WIDTH</h2>
+    <div class="preview three-fit-width">
+        <div class="left-column">LEFT</div>
+        <div class="middle-column">MIDDLE</div>
+        <div class="right-column">RIGHT</div>
+    </div>
+</section>
+</body>
+</html>
